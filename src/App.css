@@ -1,12 +1,15 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+@import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #FFFAFA;
-  scroll-behavior: smooth;
-  font-family: "Rubik", sans-serif;
+@theme {
+  --font-rubik: 'Rubik', sans-serif;
+  --font-dynapuff: 'DynaPuff', cursive;
+
+  --color-background: #FFFAFA;
+  --color-primary-orange: #FF7300;
+  --color-secondary-orange: #FFB730;
+  --color-primary-purple: #B908DD;
+  --color-secondary-purple: #FF67FB;
+  --color-green: #02A759;
 }
