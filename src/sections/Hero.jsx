@@ -6,6 +6,7 @@ import { useRef } from 'react';
 
 export default function Hero() {
   const textRef = useRef(null);
+  const wavesRef = useRef(null);
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -20,6 +21,13 @@ export default function Hero() {
       y: -300,
       scale:1.5,
       ease: 'none',
+    });
+
+    gsap.to(wavesRef.current, {
+      xPercent: -50,
+      duration: 12,  
+      ease: 'linear',
+      repeat: -1,
     });
   }, []);
 
@@ -36,17 +44,19 @@ export default function Hero() {
 
       <div 
         ref={textRef} 
-        className="relative z-10 flex flex-col h-full items-center justify-end text-white pb-60 md:pb-20">
-        <h1 className="text-6xl text-primary-orange font-dynapuff font-bold">
+        className="relative z-10 flex flex-col h-full items-center justify-end text-white xl:pb-50 md:pb-20">
+        <h1 className="text-6xl xl:text-secondary-orange md:text-primary-orange font-dynapuff font-bold">
           Viajar é Viver
         </h1>
         <h4 className='font-dynapuff'>Excursões e pacotes especiais com a Bim Turismo</h4>
       </div>
 
-      <img 
-        src={Ondas} 
-        alt="Ondas Laranja" 
-        className='absolute bottom-24 md:bottom-16.5 w-full'/>
+      <div className='absolute xl:bottom-24 md:bottom-16.5 w-full overflow-hidden'>
+        <div ref={wavesRef} className='flex'>
+          <img src={Ondas} alt="" aria-hidden="true" className='min-w-full shrink-0'/>
+          <img src={Ondas} alt="" aria-hidden="true" className='min-w-full shrink-0'/>
+        </div>
+      </div>
     </section>
   )
 }
