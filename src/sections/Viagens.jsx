@@ -1,6 +1,6 @@
 import Coqueiro from '../assets/Coqueiro.svg'
 import Aviao from '../assets/Aviao.svg'
-import { Card, CardContent } from "@/components/ui/card"
+import LinhaColorida from '../assets/linhaColorida.png';
 import {
   Carousel,
   CarouselContent,
@@ -8,6 +8,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import TripCard from '../components/TripCard.jsx';
+import { TripData } from '../data/TripData.jsx';
 import { gsap, ScrollTrigger } from 'gsap/all';
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
@@ -15,6 +17,7 @@ import { useRef } from 'react';
 export default function Viagens() {
   const coqueiroRef = useRef(null);
   const aviaoRef = useRef(null);
+  const carouselRef = useRef(null);
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -52,6 +55,23 @@ export default function Viagens() {
         ease: 'power1.out',
       }
     );
+
+    gsap.fromTo(
+      carouselRef.current,
+      { yPercent: 60, opacity: 0, scale: 0.95 },
+      {
+        yPercent: 0,
+        opacity: 1,
+        scale: 1,
+        scrollTrigger: {
+          trigger: '.viagens-section',
+          start: 'top 95%',
+          end: 'bottom bottom',
+          scrub: .3,
+        },
+        ease: 'power1.out',
+      }
+    );
   }, []);
 
   return (
@@ -74,7 +94,7 @@ export default function Viagens() {
         />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center gap-7.5 h-full py-20">
+      <div ref={carouselRef} className="relative z-10 flex flex-col items-center justify-center gap-7.5 h-full py-20">
         <h1 className='text-[32px] text-background font-light'>CONFIRA NOSSAS PRÓXIMAS VIAGENS</h1>
         <Carousel
           opts={{
@@ -83,14 +103,10 @@ export default function Viagens() {
           className="w-full max-w-6xl"
         >
           <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4 ">
+            {TripData.map((item) => (
+              <CarouselItem key={item.id} className="md:basis-1/3 lg:basis-1/4">
                 <div className="p-1">
-                  <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                      <span className="text-3xl font-semibold">{index + 1}</span>
-                    </CardContent>
-                  </Card>
+                  <TripCard data={item} />
                 </div>
               </CarouselItem>
             ))}
@@ -99,6 +115,10 @@ export default function Viagens() {
           <CarouselNext />
         </Carousel>
       </div>
+      <img
+        className="absolute bottom-0 left-0 w-full"
+        src={LinhaColorida}
+        alt=""></img>
     </section>
   );
 }
