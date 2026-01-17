@@ -1,11 +1,9 @@
 import WhatsappLogo from '../assets/icons/LogoWhatsappWhite.svg';
 
-const message = `
-Olá! 
+const message = `Olá! 
 Seja bem-vindo(a) à Bim Turismo! 
 Em breve nossa equipe vai te responder.
-Como podemos te ajudar? 
-`
+Como podemos te ajudar?`;
 
 const whatsappUrl = `https://wa.me/5588999063361?text=${encodeURIComponent(message)}`
 

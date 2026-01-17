@@ -17,6 +17,7 @@ import { useRef } from 'react';
 export default function Viagens() {
   const coqueiroRef = useRef(null);
   const aviaoRef = useRef(null);
+  const textoRef = useRef(null);
   const carouselRef = useRef(null);
 
   useGSAP(() => {
@@ -49,6 +50,23 @@ export default function Viagens() {
         scrollTrigger: {
           trigger: '.viagens-section',
           start: 'top 85%',
+          end: 'bottom bottom',
+          scrub: .3,
+        },
+        ease: 'power1.out',
+      }
+    );
+
+    gsap.fromTo(
+      textoRef.current,
+      { yPercent: 60, opacity: 0, scale: 0.95 },
+      {
+        yPercent: 0,
+        opacity: 1,
+        scale: 1,
+        scrollTrigger: {
+          trigger: '.viagens-section',
+          start: 'top 95%',
           end: 'bottom bottom',
           scrub: .3,
         },
@@ -94,9 +112,10 @@ export default function Viagens() {
         />
       </div>
 
-      <div ref={carouselRef} className="relative z-10 flex flex-col items-center justify-center gap-7.5 h-full py-20">
-        <h1 className='text-[32px] text-background font-light'>CONFIRA NOSSAS PRÓXIMAS VIAGENS</h1>
+      <div className="relative z-10 flex flex-col items-center justify-center gap-7.5 h-full py-20">
+        <h1 ref={textoRef} className='text-[32px] text-background font-light'>CONFIRA NOSSAS PRÓXIMAS VIAGENS</h1>
         <Carousel
+          ref={carouselRef}
           opts={{
             align: "center",
           }}
