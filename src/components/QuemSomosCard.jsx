@@ -21,7 +21,7 @@ export default function QuemSomosCard({ icon, texto, textoVerso }) {
       >
         {/* Frente do card */}
         <div
-          className="absolute w-full h-full bg-white rounded-xl shadow-xl flex flex-col items-center justify-center p-4"
+          className="absolute w-full h-full bg-white rounded-xl shadow-xl flex flex-col items-center justify-center p-4 text-text-gray"
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img src={icon} alt="Ícone" />

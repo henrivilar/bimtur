@@ -132,7 +132,7 @@ export default function QuemSomos() {
   }, []);
 
   return (
-    <section className="relative w-full h-full bg-background flex flex-col items-center justify-center">
+    <section className="relative w-full h-full bg-background flex flex-col items-center justify-center overflow-hidden">
       <div ref={BGRef} className="absolute inset-0">
         <img
           src={SectionBG}
@@ -142,7 +142,7 @@ export default function QuemSomos() {
       </div>
       <div className='quem-somos relative z-10 mt-8.5 mb-13 flex flex-col items-center gap-6'>
         <h2 ref={titulo1Ref} className='text-primary-orange text-[32px] font-light'>POR QUE VIAJAR COM A BIM TURISMO?</h2>
-        <p ref={textoRef} className='max-w-190 text-center'>Fundada em 1999 no coração do Cariri, em Juazeiro do Norte, a <span className='font-bold'>Bim Turismo</span> é uma agência especializada em viagens e excursões que transforma cada roteiro em uma experiência inesquecível. Com mais de duas décadas de atuação, oferecemos excursões organizadas, hotéis cuidadosamente selecionados e destinos incríveis pelo Nordeste, além de viagens nacionais e internacionais na América do Sul. Tudo isso com atendimento próximo, segurança e a confiança de milhares de clientes satisfeitos ao longo dos anos.</p>
+        <p ref={textoRef} className='max-w-190 text-center text-text-gray'>Fundada em 1999 no coração do Cariri, em Juazeiro do Norte, a <span className='font-bold'>Bim Turismo</span> é uma agência especializada em viagens e excursões que transforma cada roteiro em uma experiência inesquecível. Com mais de duas décadas de atuação, oferecemos excursões organizadas, hotéis cuidadosamente selecionados e destinos incríveis pelo Nordeste, além de viagens nacionais e internacionais na América do Sul. Tudo isso com atendimento próximo, segurança e a confiança de milhares de clientes satisfeitos ao longo dos anos.</p>
         <div className='quem-somos flex gap-6 cards-container'>
           <div className='card-item'>
             <QuemSomosCard

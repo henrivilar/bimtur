@@ -7,15 +7,15 @@ export default function TripCard({ data }) {
     <div className="container w-67.5 h-94 bg-background rounded-4xl overflow-hidden shadow-md hover:scale-[1.02] transition-all duration-300 hover:cursor-pointer relative z-0 hover:z-20">
       <div className="w-full relative">
         <img src={img} alt={destino} className="w-full h-60 object-cover" />
-        <div className="absolute top-48 right-0 flex flex-col px-6 py-1 bg-background rounded-tl-xl items-end z-10">
-          <span className="text-sm text-gray-600">{qtdParcelas} {valorParcela}</span>
+        <div className="absolute top-48 right-0 flex flex-col px-6 py-2 bg-background rounded-tl-xl items-end z-10">
+          <span className="text-sm text-gray-600 -mb-2">{qtdParcelas} {valorParcela}</span>
           <span className="text-xl text-green font-bold">{valor}</span>
         </div>
       </div>
 
       <div className="p-4">
-        <h2 className="text-xl font-semibold">{destino}</h2>
-        <p className="text-sm text-muted-foreground">Ida: {dataIda} — Volta: {dataVolta}</p>
+        <h2 className="text-xl text-text-gray font-semibold">{destino}</h2>
+        <p className="text-sm text-text-gray text-muted-foreground">Ida: {dataIda} — Volta: {dataVolta}</p>
         {status && (
           <div className="mt-3">
             {
