@@ -9,14 +9,17 @@ export default function Navbar() {
   return (
     <nav className='fixed top-0 left-0 w-full z-50 bg-background shadow-md'>
       <div className='flex justify-between items-center py-6 max-w-360 mx-auto px-6 md:h-16 xl:h-20 md:px-12 xl:px-36'>
-        <img src={Logo} alt="Logo" className='xl:w-20 md:w-16' />
+        <a href='#Hero'>
+          <img src={Logo} alt="Logo" className='xl:w-20 md:w-16' />
+        </a>
+        
 
         <ul className='flex items-center h-full text-primary-orange font-light'>
 
-          <li className={hoverScale}><a href='#' className={linksStyle}>VIAGENS</a></li>
-          <li className={hoverScale}><a href='#' className={linksStyle}>QUEM SOMOS</a></li>
-          <li className={hoverScale}><a href='#' className={linksStyle}>CLIENTES</a></li>
-          <li className={hoverScale}><a href='#' className={linksStyle}>CONTATOS</a></li>
+          <li className={hoverScale}><a href='#Viagens' className={linksStyle}>VIAGENS</a></li>
+          <li className={hoverScale}><a href='#QuemSomos' className={linksStyle}>QUEM SOMOS</a></li>
+          <li className={hoverScale}><a href='#Clientes' className={linksStyle}>CLIENTES</a></li>
+          <li className={hoverScale}><a href='#Contatos' className={linksStyle}>CONTATOS</a></li>
         </ul>
 
         <Button />

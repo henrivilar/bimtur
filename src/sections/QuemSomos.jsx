@@ -132,7 +132,7 @@ export default function QuemSomos() {
   }, []);
 
   return (
-    <section className="relative w-full h-full bg-background flex flex-col items-center justify-center overflow-hidden">
+    <section id='QuemSomos' className="relative w-full h-full max-w-360 mx-auto bg-background flex flex-col items-center justify-center overflow-hidden scroll-mt-20">
       <div ref={BGRef} className="absolute inset-0">
         <img
           src={SectionBG}
@@ -174,7 +174,7 @@ export default function QuemSomos() {
           </div>
         </div>
       </div>
-      <div className='feedback relative z-10 mt-8.5 mb-13 flex flex-col items-center gap-6'>
+      <div id='Clientes' className='feedback relative z-10 mt-8.5 mb-13 flex flex-col items-center gap-6 scroll-mt-20'>
         <h2 ref={titulo2Ref} className='text-primary-orange text-[32px] font-light'>FEEDBACK DOS CLIENTES</h2>
         <div className='flex gap-6 cards-container'>
           <div className='card-item'>

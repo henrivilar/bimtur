@@ -69,8 +69,8 @@ export default function Contatos() {
   }, []);
 
   return (
-    <section className='contatos relative w-full min-h-150 bg-primary-purple overflow-hidden '>
-      <div className='absolute w-full overflow-hidden top-0 bg-background'>
+    <section id='Contatos' className='contatos relative w-full min-h-150 bg-primary-purple overflow-hidden '>
+      <div className='absolute w-full overflow-hidden top-0 bg-background scroll-mt-20'>
         <div ref={wavesRoxaRef} className='flex -mb-1'>
           <img src={Ondas} alt="" aria-hidden="true" className='min-w-full shrink-0' />
           <img src={Ondas} alt="" aria-hidden="true" className='min-w-full shrink-0' />

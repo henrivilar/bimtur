@@ -93,7 +93,7 @@ export default function Viagens() {
   }, []);
 
   return (
-    <section className="viagens-section relative min-h-130 bg-primary-orange -mt-25 overflow-hidden">
+    <section id='Viagens' className="viagens-section relative min-h-130 bg-primary-orange -mt-25 overflow-hidden scroll-mt-20">
       {/* background images positioned absolutely */}
       <div className="absolute inset-0 flex justify-between items-center pointer-events-none z-0">
         <img
