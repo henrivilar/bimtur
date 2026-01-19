@@ -1,27 +1,18 @@
-import './App.css'
-import { useState } from 'react'
-import LoadingScreen from './components/LoadingScreen.jsx'
-import Hero from './sections/Hero.jsx'
-import Navbar from './sections/Navbar.jsx'
-import Viagens from './sections/Viagens.jsx'
-import QuemSomos from './sections/QuemSomos.jsx'
-import Contatos from './sections/Contatos.jsx'
+import DesktopLayout from "./layouts/DesktopLayout"
+import MobileLayout from "./layouts/MobileLayout"
 
 export default function App() {
-  const [showLoading, setShowLoading] = useState(true)
-
-  const handleLoadingComplete = () => {
-    setShowLoading(false)
-  }
-
   return (
-    <div class='bg-background font-rubik'>
-      {showLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
-      <Navbar />
-      <Hero />
-      <Viagens />
-      <QuemSomos />
-      <Contatos />
-    </div>
+    <>
+      {/* MOBILE (até md) */}
+      <div className="block lg:hidden">
+        <MobileLayout />
+      </div>
+
+      {/* DESKTOP (lg pra cima) */}
+      <div className="hidden lg:block">
+        <DesktopLayout />
+      </div>
+    </>
   )
 }

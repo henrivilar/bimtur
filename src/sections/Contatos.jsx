@@ -22,6 +22,7 @@ export default function Contatos() {
   const wavesRoxaRef = useRef(null);
   const aviaoRef = useRef(null);
   const coqueiroRef = useRef(null);
+  const tituloRef = useRef(null);
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -66,6 +67,61 @@ export default function Contatos() {
       ease: 'linear',
       repeat: -1,
     });
+
+    gsap.fromTo(
+      tituloRef.current,
+      { yPercent: 60, opacity: 0, scale: 0.95 },
+      {
+        yPercent: 0,
+        opacity: 1,
+        scale: 1,
+        scrollTrigger: {
+          trigger: '.contatos',
+          start: 'top 95%',
+          end: 'bottom bottom',
+          scrub: .3,
+        },
+        ease: 'power1.out',
+      }
+    );
+
+    gsap.fromTo(
+      '.buttons .btn',
+      { yPercent: 60, opacity: 0, scale: 0.95 },
+      {
+        yPercent: 0,
+        opacity: 1,
+        scale: 1,
+        stagger: 0.2,
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: '.buttons',
+          start: 'top 95%',
+          end: 'top 65%',
+          scrub: .3,
+        },
+        ease: 'power1.out',
+      }
+    );
+
+    gsap.fromTo(
+      '.localizacao .item',
+      { yPercent: 60, opacity: 0, scale: 0.95 },
+      {
+        yPercent: 0,
+        opacity: 1,
+        scale: 1,
+        stagger: 0.2,
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: '.buttons',
+          start: 'top 95%',
+          end: 'top 65%',
+          scrub: .3,
+        },
+        ease: 'power1.out',
+      }
+    );
   }, []);
 
   return (
@@ -95,28 +151,34 @@ export default function Contatos() {
       </div>
 
       <div className='relative z-10 flex flex-col justify-center items-center gap-6 top-26 max-w-360 mx-auto'>
-        <h1 className='text-background text-[32px] font-light'>CONTATOS</h1>
+        <h1 ref={tituloRef} className='text-background text-[32px] font-light'>CONTATOS</h1>
         <div className='flex items-center gap-30.5'>
           <div className='buttons flex flex-col gap-7'>
-            <ContatosBTN 
-              link={whatsappUrl}
-              icon={WhatsappLogo}
-              text='WHATSAPP'
-            />
-            <ContatosBTN 
+            <div className='btn'>
+              <ContatosBTN 
+                link={whatsappUrl}
+                icon={WhatsappLogo}
+                text='WHATSAPP'
+              />
+            </div>
+            <div className='btn'>
+              <ContatosBTN 
               link={instagramUrl}
               icon={InstagramLogo}
               text='INSTAGRAM'
             />
-            <ContatosBTN 
+            </div>
+            <div className='btn'>
+              <ContatosBTN 
               icon={EmailLogo}
               text='EMAIL'
             />
+            </div>
           </div>
 
-          <div>
-            <p className='bg-background text-text-gray px-2 py-1 rounded-md mb-2'>Rua São Paulo, 715 - Centro, Juazeiro do Norte - CE</p>
-            <div className="w-100 h-75 rounded-xl overflow-hidden">
+          <div className='localizacao'>
+            <p className='item bg-background text-text-gray px-2 py-1 rounded-md mb-2'>Rua São Paulo, 715 - Centro, Juazeiro do Norte - CE</p>
+            <div className="item w-100 h-75 rounded-xl overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.304784317347!2d-39.316919899999995!3d-7.206027400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a178ab3f68ddbb%3A0xbd45f6c594fcf639!2sBim%20Turismo!5e0!3m2!1spt-BR!2sbr!4v1768690159892!5m2!1spt-BR!2sbr"
                 className="w-full h-full border-0"

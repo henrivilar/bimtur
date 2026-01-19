@@ -44,7 +44,7 @@ export default function Hero() {
 
       <div 
         ref={textRef} 
-        className="relative z-10 flex flex-col h-full items-center justify-end text-white xl:pb-20 md:pb-20">
+        className="relative z-10 flex flex-col h-full items-center justify-end text-white xl:pb-20 2xl:pb-40">
         <h1 className="text-6xl xl:text-secondary-orange md:text-primary-orange font-dynapuff font-bold">
           Viajar é Viver
         </h1>

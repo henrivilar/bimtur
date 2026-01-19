@@ -92,13 +92,13 @@ export default function LoadingScreen({ onLoadingComplete }) {
           <img src={Ondas} alt="" aria-hidden="true" className='min-w-full shrink-0'/>
           <img src={Ondas} alt="" aria-hidden="true" className='min-w-full shrink-0'/>
         </div>
-        <div className='flex justify-center items-end'>
+        {/* <div className='flex justify-center items-end'>
           <img 
             src={Logo} 
             alt='Logo'
             className='w-100'>  
           </img>
-        </div>
+        </div> */}
       </div>
       <div className={`loading-counter ${!isAnimating ? 'hidden' : ''}`}>
         <span>{counterPercentage}%</span>
