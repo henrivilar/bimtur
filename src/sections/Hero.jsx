@@ -44,14 +44,14 @@ export default function Hero() {
 
       <div 
         ref={textRef} 
-        className="relative z-10 flex flex-col h-full items-center justify-end text-white xl:pb-20 2xl:pb-40">
-        <h1 className="text-6xl xl:text-secondary-orange md:text-primary-orange font-dynapuff font-bold">
+        className="relative z-10 flex flex-col h-full items-center justify-end text-white md:pb-40 xl:pb-40 2xl:pb-40">
+        <h1 className="text-6xl xl:text-secondary-orange md:text-secondary-orange font-dynapuff font-bold">
           Viajar é Viver
         </h1>
         <h4 className='font-dynapuff'>Excursões e pacotes especiais com a Bim Turismo</h4>
       </div>
 
-      <div className='absolute xl:bottom-24 md:bottom-16.5 w-full overflow-hidden'>
+      <div className='absolute xl:bottom-24 md:bottom-24.5 w-full overflow-hidden'>
         <div ref={wavesRef} className='flex'>
           <img src={Ondas} alt="" aria-hidden="true" className='min-w-full shrink-0'/>
           <img src={Ondas} alt="" aria-hidden="true" className='min-w-full shrink-0'/>

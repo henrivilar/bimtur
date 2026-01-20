@@ -3,6 +3,12 @@ import imgPetrolina from '../assets/images/petrolina.webp';
 import imgParqueDasFontes from '../assets/images/parqueDasFontes.jpg';
 import imgXingo from '../assets/images/xingo.jpg';
 import imgFortaleza from '../assets/images/fortaleza.jpg';
+import imgAparecida from '../assets/images/aparecida.jpg';
+import imgGramado from '../assets/images/gramado.webp';
+import imgFozDoIguacu from '../assets/images/fozDoIguacu.jpg';
+import imgColiseum from '../assets/images/coliseum.jpg';
+import imgSaoMiguelDosMilagres from '../assets/images/saoMiguelDosMilagres.jpg';
+import imgMaragogi from '../assets/images/maragogi.webp';
 
 export const TripData = [
   {
@@ -59,5 +65,82 @@ export const TripData = [
     dataIda: '26/02',
     dataVolta: '01/03',
     status: 'DISPONIVEL',
-  }
+  },
+  {
+    id: 6,
+    img: imgAparecida,
+    destino: 'Aparecida - SP',
+    valor: 'VALORES',
+    qtdParcelas: 'CONSULTAR',
+    valorParcela: '',
+    dataIda: '05/03',
+    dataVolta: '09/03',
+    status: 'DISPONIVEL',
+  },
+  {
+    id: 7,
+    img: imgGramado,
+    destino: 'Gramado - SC',
+    valor: 'VALORES',
+    qtdParcelas: 'CONSULTAR',
+    valorParcela: '',
+    dataIda: '12/03',
+    dataVolta: '16/03',
+    status: 'DISPONIVEL',
+  },
+  {
+    id: 8,
+    img: imgFozDoIguacu,
+    destino: 'Foz do Iguaçu - PR',
+    valor: 'VALORES',
+    qtdParcelas: 'CONSULTAR',
+    valorParcela: '',
+    dataIda: '21/03',
+    dataVolta: '25/03',
+    status: 'DISPONIVEL',
+  },
+  {
+    id: 9,
+    img: imgParqueDasFontes,
+    destino: 'Parque das Fontes - CE',
+    valor: 'R$ 1.999,00',
+    qtdParcelas: '6x',
+    valorParcela: 'R$ 349,00',
+    dataIda: '21/03',
+    dataVolta: '25/03',
+    status: 'DISPONIVEL',
+  },
+  {
+    id: 10,
+    img: imgColiseum,
+    destino: 'Coliseum - CE',
+    valor: 'R$ 2.149,00',
+    qtdParcelas: '6x',
+    valorParcela: 'R$ 379,00',
+    dataIda: '21/03',
+    dataVolta: '25/03',
+    status: 'DISPONIVEL',
+  },
+  {
+    id: 11,
+    img: imgSaoMiguelDosMilagres,
+    destino: 'São Miguel - AL',
+    valor: 'R$ 995,00',
+    qtdParcelas: '6x',
+    valorParcela: 'R$ 185,00',
+    dataIda: '26/03',
+    dataVolta: '29/03',
+    status: 'DISPONIVEL',
+  },
+  {
+    id: 12,
+    img: imgMaragogi,
+    destino: 'Maragogi - AL',
+    valor: 'R$ 995,00',
+    qtdParcelas: '6x',
+    valorParcela: 'R$ 185,00',
+    dataIda: '26/03',
+    dataVolta: '29/03',
+    status: 'DISPONIVEL',
+  },
 ];
