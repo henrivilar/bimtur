@@ -1,5 +1,5 @@
 import Logo from '../assets/images/Logo.png';
-import { Button } from '../components/button.jsx';
+import { Button } from '../components/NavButton.jsx';
 
 export default function Navbar() {
 
